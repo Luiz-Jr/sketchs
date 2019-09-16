@@ -7,13 +7,13 @@ https://www.youtube.com/channel/UCks-9JSnVb22dlqtMgPjrlg
 
 */
 
-#define T_C 262
-#define T_D 294
-#define T_E 330
-#define T_F 349
-#define T_G 392
-#define T_A 440
-#define T_B 493
+#define T_A 262
+#define T_B 294
+#define T_C 330
+#define T_D 349
+#define T_E 392
+#define T_F 440
+#define T_G 493
 
 const int C = 10;
 const int D = 9;
