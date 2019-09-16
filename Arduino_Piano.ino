@@ -29,6 +29,14 @@ const int LED = 13;
 void setup()
 {
   pinMode(LED, OUTPUT);
+  digitalWrite(LED,LOW);
+
+  pinMode(A, INPUT);
+  digitalWrite(A,HIGH);
+  
+  pinMode(B, INPUT);
+  digitalWrite(B,HIGH);
+  
   pinMode(C, INPUT);
   digitalWrite(C,HIGH);
   
@@ -43,21 +51,13 @@ void setup()
   
   pinMode(G, INPUT);
   digitalWrite(G,HIGH);
-  
-  pinMode(A, INPUT);
-  digitalWrite(A,HIGH);
-  
-  pinMode(B, INPUT);
-  digitalWrite(B,HIGH);
-
-   digitalWrite(LED,LOW);
 }
 
 void loop()
 {
-  while(digitalRead(C) == LOW)
+  while(digitalRead(A) == LOW)
   {
-    tone(Buzz,T_C);
+    tone(Buzz,T_A);
     digitalWrite(LED,HIGH);
   }
 
