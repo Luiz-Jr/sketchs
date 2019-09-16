@@ -15,13 +15,13 @@ https://www.youtube.com/channel/UCks-9JSnVb22dlqtMgPjrlg
 #define T_F 440
 #define T_G 493
 
-const int C = 10;
-const int D = 9;
+const int G = 10;
+const int F = 9;
 const int E = 8;
-const int F = 7;
-const int G = 6;
-const int A = 5;
-const int B = 4;
+const int D = 7;
+const int C = 6;
+const int B = 5;
+const int A = 4;
 
 const int Buzz = 11;
 const int LED = 13;
