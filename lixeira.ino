@@ -1,0 +1,44 @@
+#include <Servo.h>
+Servo myservo;  
+int pos = 0;  
+const int trigPin = 7;
+const int echoPin = 8;
+const int led = 13;
+
+long duration;
+float distance;
+
+void setup() 
+{
+  myservo.attach(9);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT); 
+  pinMode(led, OUTPUT);
+  myservo.write(pos);
+}
+
+void loop() 
+{
+  //Serial.begin(9600);
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+  distance = 0.034*(duration/2);
+  //Serial.println(distance);
+  if (distance < 40)
+  {
+    digitalWrite(led,HIGH);
+    myservo.write(pos+120);
+    delay(1000);
+  }
+  else 
+  {
+    digitalWrite(led,LOW);
+      myservo.write(pos);
+  }
+  delay(300);
+}
