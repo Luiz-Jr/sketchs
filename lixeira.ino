@@ -1,6 +1,6 @@
 #include <Servo.h>
 Servo myservo;  
-int pos = 0;  
+int pos = 20;  
 const int trigPin = 7;
 const int echoPin = 8;
 const int led = 13;
